@@ -23,6 +23,8 @@ public interface CategoryMapper {
 
     List<Category> getCategory();
 
+    List<Category> selectByCondition(Category condition);
+
     int insertSelective(Category record);
 
     Category selectByPrimaryKey(Long id);
