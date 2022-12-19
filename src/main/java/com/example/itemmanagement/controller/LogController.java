@@ -53,7 +53,7 @@ public class LogController {
     }
 
     @GetMapping("/")
-    public Result<List<LogInfo>> selectByItemId(@RequestBody LogInfo logInfo) {
+    public Result<List<LogInfo>> selectByItemIdOrUser(@RequestBody LogInfo logInfo) {
         Result<List<LogInfo>> result = new Result<>();
         result.setResult(logService.selectByCondition(logInfo));
         result.setCode(200);
